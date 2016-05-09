@@ -1,7 +1,7 @@
 <?php 
 
     // First we execute our common code to connection to the database and start the session 
-    require("common.php"); 
+    require("../common/common.php"); 
      
     // This variable will be used to re-display the user's username to them in the 
     // login form if they fail to enter the correct password.  It is initialized here 
@@ -93,7 +93,7 @@
             ini_set('display_errors', TRUE);
 
 
-            header('Location:edit.php');
+            header('Location:../edit/edit.php');
             die('Redirecting to edit.php');
             flush();//it will flush all collected headers. Afterwards it can send all the output it wants. But sending further HTTP headers is impossible then. Simillar mechanics with print
             
@@ -156,7 +156,7 @@
           <button type="submit" class="btn second" value="Login" />Login</button>
 
         </form> 
-        <button class="btn fourth" onclick="location='register.php'"/>Register</button>
+        <button class="btn fourth" onclick="location='../register/register.php'"/>Register</button>
     
 </div>
   </body>
