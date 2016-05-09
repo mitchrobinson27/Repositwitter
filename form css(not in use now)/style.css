@@ -1,0 +1,54 @@
+body {
+	background-color: #907979;
+}
+
+#a1 {
+
+	color:#202832;
+}
+
+table {
+	background-color: #799090;
+}
+table a:hover {
+	background-color:#799090;
+}
+
+#p1 {
+	position: absolute;
+	top:420px;
+	left:500px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+}
+
+#p2 {
+	position: absolute;
+	top:500px;
+	left:500px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+}
+
+#p3 {
+	position: absolute;
+	top:580px;
+	left:500px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+}
+
+h1 {
+	position: absolute;
+	top: 40px;
+	left: 510px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 80px;
+}
+
+.container {
+	position: absolute;
+	align-content: center;
+	top: 200px;
+	left: 500px;
+}
