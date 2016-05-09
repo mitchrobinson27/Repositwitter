@@ -61,7 +61,7 @@
 		
 		// To access $_SESSION['user'] values put in an array, show user his username
 		$arr = array_values($_SESSION['user']);
-		echo "Welcome " . $arr[2];
+		echo "<p id='p3'>Welcome, $arr[1]</p>";
 
 		// open connection
 		$connection = mysql_connect($host, $username, $password) or die ("Unable to connect!");
