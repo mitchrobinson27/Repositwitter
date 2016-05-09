@@ -23,13 +23,13 @@
 <body>
 <!-- Banner and profile picture -->
 <div class="parent">
-    <img src="https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg" alt="Nanalan" class="container" width="1000" height="128">
+    <img src="https://i.ytimg.com/vi/mJP5qFwTprk/maxresdefault.jpg" alt="Nanalan" class="img-rounded" width="1270" height="300">
     <div class="inner"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/2000px-Smiley.svg.png" class="img-thumbnail" alt="Smiley face" width="128" height="128" /></div>
 </div>
 <style>
 .parent{
-    width:200px;
-    height:200px;
+    width:170px;
+    height:360px;
     position:absolute;
     z-index:0;
 }
@@ -42,15 +42,34 @@
 }
 </style>
 
-    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--- Following Panel --->
+    <div class="row">
+        <div class="col-md-2">
+    <div class="panel panel-primary">
+    <div class="panel-heading">Following</div>
+    <div class="panel-body">...</div>
+    </div></div>
+    <!--- Tweet Panel --->
+        <div class="col-md-6 col-md-offset-1">
+    <div class="panel panel-primary">
+    <div class="panel-heading">Tweets</div>
+    <div class="panel-body">xddddddd</div>
+    </div></div>
+	<!--- Trending Panel --->
+        <div class="col-md-2 col-md-offset-10">
+    <div class="panel panel-primary">
+    <div class="panel-heading">Trending</div>
+    <div class="panel-body">#Bootstrap</div>
+</div></div></div>
 	<?php
 	    // pass in some info;
-		require("../common/common.php"); 
+		require("../../../../../Applications/MAMP/htdocs/common.php"); 
 		
 		if(empty($_SESSION['user'])) { 
   
 			// If they are not, we redirect them to the login page. 
-			$location = "http://" . $_SERVER['HTTP_HOST'] . "../login/login.php";
+			$location = "http://" . $_SERVER['HTTP_HOST'] . "/login.php";
 			echo '<META HTTP-EQUIV="refresh" CONTENT="0;URL='.$location.'">';
 			//exit;
          
@@ -61,7 +80,7 @@
 		
 		// To access $_SESSION['user'] values put in an array, show user his username
 		$arr = array_values($_SESSION['user']);
-		echo "<p id='p3'>Welcome, $arr[1]</p>";
+		echo "Welcome " . $arr[2];
 
 		// open connection
 		$connection = mysql_connect($host, $username, $password) or die ("Unable to connect!");
@@ -138,11 +157,11 @@
 	?>
     
     <!-- This is the HTML form that appears in the browser -->
-   	<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+   	<form action="<?=$_SERVER['../../../../../Applications/MAMP/htdocs/PHP_SELF']?>" method="post">
     	Country: <input type="text" name="country">
     	National animal: <input type="text" name="animal">
     	<input type="submit" name="submit">
     </form>
-    <form action="../logout/logout.php" method="post"><button>Log out</button></form>
+    <form action="../../../../../Applications/MAMP/htdocs/logout.php" method="post"><button>Log out</button></form>
 	</body>
 </html>
