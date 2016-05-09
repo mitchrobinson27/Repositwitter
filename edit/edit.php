@@ -16,6 +16,14 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">Home</a>
+      </div>
+      <div class="col-sm-3 col-md-3 pull-right">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div></div></form>
     </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -64,7 +72,7 @@
 </div></div></div>
 	<?php
 	    // pass in some info;
-		require("../../../../../Applications/MAMP/htdocs/common.php"); 
+		require("common.php"); 
 		
 		if(empty($_SESSION['user'])) { 
   
@@ -157,11 +165,11 @@
 	?>
     
     <!-- This is the HTML form that appears in the browser -->
-   	<form action="<?=$_SERVER['../../../../../Applications/MAMP/htdocs/PHP_SELF']?>" method="post">
+   	<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
     	Country: <input type="text" name="country">
     	National animal: <input type="text" name="animal">
     	<input type="submit" name="submit">
     </form>
-    <form action="../../../../../Applications/MAMP/htdocs/logout.php" method="post"><button>Log out</button></form>
+    <form action="logout.php" method="post"><button>Log out</button></form>
 	</body>
 </html>
