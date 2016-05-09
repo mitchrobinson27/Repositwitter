@@ -93,10 +93,10 @@
             ini_set('display_errors', TRUE);
 
 
-            flush();
-
             header('Location:edit.php');
             die('Redirecting to edit.php');
+            flush();//it will flush all collected headers. Afterwards it can send all the output it wants. But sending further HTTP headers is impossible then. Simillar mechanics with print
+            
         } 
         else 
         { 
@@ -111,8 +111,8 @@
             $submitted_username = htmlentities($_POST['username'], ENT_QUOTES, 'UTF-8'); 
         } 
     } 
-     
-?> 
+    
+?>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
